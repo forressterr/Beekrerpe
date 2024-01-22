@@ -23,15 +23,15 @@ public class HandlePlayerInput : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && EventSystem.current.IsPointerOverGameObject() == false)
-        {
-            HandleMouseClick();
-        }
+        //if (Input.GetMouseButtonDown(0) && EventSystem.current.IsPointerOverGameObject() == false)
+        //{
+        //    HandleMouseClick();
+        //}
 
-        if (Input.GetMouseButtonUp(0) && EventSystem.current.IsPointerOverGameObject() == false)
-        {
-            HandleMouseUp();
-        }
+        //if (Input.GetMouseButtonUp(0) && EventSystem.current.IsPointerOverGameObject() == false)
+        //{
+        //    HandleMouseUp();
+        //}
     }
 
     private void HandleMouseClick()
