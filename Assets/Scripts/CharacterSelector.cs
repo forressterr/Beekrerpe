@@ -41,6 +41,6 @@ public class CharacterSelecter : MonoBehaviour
 
         }
         selectedUnit.GetComponent<UnitScript>().Selected = true;
-        selectedUnit.GetComponentInChildren<SpriteRenderer>().color = new Color(200,0,0);
+        selectedUnit.GetComponentInChildren<SpriteRenderer>().color = new Color(0,60,80,1);
     }
 }

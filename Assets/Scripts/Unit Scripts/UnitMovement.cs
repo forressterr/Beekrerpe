@@ -9,10 +9,12 @@ public class UnitScript : MonoBehaviour
     [SerializeField] public int SpeedRemaining = 0;
     [Tooltip("Animation speed")]
     [SerializeField] public int animationSpeed = 1;
+    private Color baseColor;
     // Start is called before the first frame update
     void Start()
     {
         SpeedRemaining = Speed;
+        baseColor = gameObject.GetComponentInChildren<SpriteRenderer>().color;
     }
 
     bool moving = false;
@@ -22,6 +24,10 @@ public class UnitScript : MonoBehaviour
         if (Input.GetMouseButtonDown(1) && SpeedRemaining > 0 && !moving && Selected)
         {
             Travel();
+        }
+        if (!Selected)
+        {
+            gameObject.GetComponentInChildren<SpriteRenderer>().color = baseColor;
         }
     }
 
