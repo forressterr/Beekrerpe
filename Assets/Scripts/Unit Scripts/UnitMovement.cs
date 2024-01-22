@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UnitScript : MonoBehaviour
 {
-    Rigidbody2D rb;
+    [SerializeField] public bool Selected = false;
     [SerializeField] public int Speed = 5;
     [SerializeField] public int SpeedRemaining = 0;
     [Tooltip("Animation speed")]
@@ -12,7 +12,6 @@ public class UnitScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb = gameObject.GetComponent<Rigidbody2D>();
         SpeedRemaining = Speed;
     }
 
@@ -20,7 +19,7 @@ public class UnitScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && SpeedRemaining > 0 && !moving)
+        if (Input.GetMouseButtonDown(1) && SpeedRemaining > 0 && !moving && Selected)
         {
             Travel();
         }
