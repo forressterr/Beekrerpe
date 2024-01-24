@@ -5,7 +5,7 @@ using UnityEngine;
 public class UnitScript : MonoBehaviour
 {
     [SerializeField] public bool Selected = false;
-    [SerializeField] public int Speed = 5;
+    [SerializeField] public int Speed = 15;
     [SerializeField] public int SpeedRemaining = 0;
     [Tooltip("Animation speed")]
     [SerializeField] public int animationSpeed = 1;
@@ -79,7 +79,7 @@ public class UnitScript : MonoBehaviour
                 SpeedRemaining--;
             }           
             gameObject.GetComponent<Transform>().position = newPos;
-            yield return new WaitForSeconds(1/ animationSpeed);
+            yield return new WaitForSeconds(0.8f / animationSpeed);
         }
         moving = false;
     }
@@ -125,21 +125,8 @@ public class UnitScript : MonoBehaviour
         return fin;
     }
 
-    IEnumerator MoveTileY(float unit, float finY)
+    public void Refresh()
     {
-        Vector3 newPos = gameObject.GetComponent<Transform>().position;
-        while (SpeedRemaining > 0 && finY != newPos.y)
-        {
-            moving = true;
-            if (finished) break;
-            bool dir = HeadingTowardsNegative(unit, finY);
-            if (dir)
-                newPos.y--;
-            else newPos.y++;
-            gameObject.GetComponent<Transform>().position = newPos;
-            SpeedRemaining--;
-            yield return new WaitForSeconds(1 / animationSpeed);
-        }
-        moving = false;
+        SpeedRemaining = Speed;
     }
 }

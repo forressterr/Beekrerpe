@@ -60,17 +60,22 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.16f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Hive.cs" />
+    <Compile Include="Assets\Scripts\SelectHive.cs" />
     <Compile Include="Assets\Scripts\CharacterSelector.cs" />
     <Compile Include="Assets\_Scripts\Unit.cs" />
     <Compile Include="Assets\_Scripts\Feedback\FlashFeedback.cs" />
     <Compile Include="Assets\Scripts\PolinateMe.cs" />
     <Compile Include="Assets\Scripts\Unit Scripts\UnitHealth.cs" />
+    <Compile Include="Assets\Scripts\NewTurn.cs" />
     <Compile Include="Assets\Scripts\Camera Scripts\ScrollCamera.cs" />
     <Compile Include="Assets\Scripts\Camera Scripts\MoveCamera.cs" />
     <Compile Include="Assets\_Scripts\SelectionManager.cs" />
+    <Compile Include="Assets\Scripts\CreateWorker.cs" />
     <Compile Include="Assets\_Scripts\CharacterMovement.cs" />
     <Compile Include="Assets\_Scripts\HandlePlayerInput.cs" />
     <Compile Include="Assets\Scripts\Unit Scripts\UnitMovement.cs" />
+    <Compile Include="Assets\Music\SfxSguffle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
